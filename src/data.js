@@ -5,32 +5,59 @@ export const snapshot = {
   boardQuestion: "Which watsonx model use cases need risk, disclosure, or access evidence before executive sign-off?",
   liveSurface: "https://watsonx.kineticgain.com/",
   signals: [
-  {
-    "Confidence": 88,
-    "Owner": "AI governance",
-    "Recoverable": 0,
-    "Severity": 86,
-    "Action": "Assign model risk tier and disclosure posture",
-    "Name": "Unclassified assistant use case",
-    "Area": "model risk"
-  },
-  {
-    "Confidence": 83,
-    "Owner": "Platform AI",
-    "Recoverable": 0,
-    "Severity": 75,
-    "Action": "Enable prompt and response audit event export",
-    "Name": "Prompt audit stream missing",
-    "Area": "evidence"
-  },
-  {
-    "Confidence": 80,
-    "Owner": "Data governance",
-    "Recoverable": 0,
-    "Severity": 67,
-    "Action": "Attach source dataset card and retention policy",
-    "Name": "Dataset lineage uncertainty",
-    "Area": "lineage"
-  }
-]
+    {
+      Confidence: 89,
+      Owner: "AI governance",
+      Recoverable: 0,
+      Severity: 88,
+      Action: "Assign model risk tier, approved use boundary, and disclosure posture before rollout.",
+      Name: "Unclassified assistant use case",
+      Area: "model risk",
+    },
+    {
+      Confidence: 84,
+      Owner: "Platform AI",
+      Recoverable: 0,
+      Severity: 82,
+      Action: "Enable prompt, response, retrieval, and tool-call audit event export.",
+      Name: "Prompt audit stream missing",
+      Area: "evidence",
+    },
+    {
+      Confidence: 81,
+      Owner: "Data governance",
+      Recoverable: 0,
+      Severity: 74,
+      Action: "Attach source dataset card, retention policy, and approved training or grounding use.",
+      Name: "Dataset lineage uncertainty",
+      Area: "lineage",
+    },
+    {
+      Confidence: 78,
+      Owner: "Security architecture",
+      Recoverable: 0,
+      Severity: 72,
+      Action: "Map watsonx service roles to least-privilege IBM Cloud IAM groups and quarterly review.",
+      Name: "IBM Cloud IAM drift",
+      Area: "access",
+    },
+    {
+      Confidence: 76,
+      Owner: "Model operations",
+      Recoverable: 0,
+      Severity: 69,
+      Action: "Publish eval-gate thresholds for model updates, retrieval changes, and prompt releases.",
+      Name: "Eval gate not board-readable",
+      Area: "release",
+    },
+    {
+      Confidence: 73,
+      Owner: "Compliance operations",
+      Recoverable: 0,
+      Severity: 64,
+      Action: "Bundle system card, data card, vendor disclosure, and incident route into one review packet.",
+      Name: "Evidence packet fragmented",
+      Area: "attestation",
+    },
+  ],
 };

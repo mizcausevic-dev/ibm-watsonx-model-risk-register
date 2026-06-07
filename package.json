@@ -9,13 +9,23 @@
     "type": "git",
     "url": "git+https://github.com/mizcausevic-dev/ibm-watsonx-model-risk-register.git"
   },
-  "keywords": ["ibm-watsonx","ai-governance","kinetic-gain","executive-intelligence","risk-scoring"],
+  "keywords": [
+    "ibm-watsonx",
+    "ai-governance",
+    "kinetic-gain",
+    "executive-intelligence",
+    "risk-scoring",
+    "model-risk",
+    "ibm-cloud"
+  ],
   "bin": {
     "ibm-watsonx-model-risk-register": "src/cli.js"
   },
   "scripts": {
+    "build:site": "node scripts/build_site.js",
     "start": "node src/cli.js",
-    "test": "node --test"
+    "test": "node --test",
+    "verify": "npm test && npm run build:site"
   },
   "engines": {
     "node": ">=20"

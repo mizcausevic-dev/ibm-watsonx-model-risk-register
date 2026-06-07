@@ -13,6 +13,6 @@ test('scores IBM watsonx snapshot into a board posture', () => {
 test('keeps recoverable value and live surface explicit', () => {
   const result = analyzeSnapshot(snapshot);
   assert.equal(result.liveSurface, 'https://watsonx.kineticgain.com/');
-  assert.equal(result.signals.length, 3);
+  assert.ok(result.signals.length >= 6);
   assert.ok(Number.isInteger(result.recoverableUsd));
 });
